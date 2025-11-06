@@ -13,14 +13,17 @@ class Orc(Basic_player):
         self.armor_rating = randint(2,8)
         self.weapon = self.weapon()
 
+
     def weapon(self):
         type_weapon = ["knife", "sword","axe"]
         index = randint(0, 2)
 
         return type_weapon[index]
 
+
     def speak(self):
         print(f"This is {self.name} from {self.type} family speak")
+
 
     def attack(self):
         pass

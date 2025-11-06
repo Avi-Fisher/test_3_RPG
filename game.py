@@ -21,6 +21,7 @@ class Game():
         self.player = Player(name)
         print(f"{name} lets  kill a monster")
 
+        self.monster = self.choose_random_monster()
 
 
     def show_menu(self):
@@ -44,7 +45,6 @@ class Game():
             print("Dont do mistic monster kill you")
 
 
-
     def choose_random_monster(self):
         monster = []
 
@@ -55,7 +55,6 @@ class Game():
         monster.append(o1)
 
         return monster[randint(0,1)]
-
 
 
     def battle(self):
@@ -108,14 +107,19 @@ class Game():
 
             self.not_turn.hp -= turn_power
 
-        if self.not_turn.hp <= 0:
-            print(f"{self.turn.name} winnnnn")
-            return True
+            if self.not_turn.hp <= 0:
+                print(f"{self.turn.name} winnnnn")
+                return True
 
-        print(f"{self.not_turn.name} have {self.not_turn.hp} life")
+            print(f"{self.not_turn.name} have {self.not_turn.hp} life")
+
+        else:
+            print(f"{self.not_turn} repel the attack")
+
+
+
 
         self.turn, self.not_turn = self.not_turn, self.turn
-
 
 
     def roll_dice(self):

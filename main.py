@@ -5,12 +5,7 @@ from core.player import Player
 if __name__ == "__main__":
 
     game = Game()
-    game.monster = game.choose_random_monster()
     game.start()
-
-
-
-
 
 
     while True:
