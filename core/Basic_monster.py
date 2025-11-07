@@ -23,9 +23,11 @@ class Basic_monster():
     def speak(self):
         pass
 
+
     @abstractmethod
     def attack(self,player):
         pass
+
 
 
 
